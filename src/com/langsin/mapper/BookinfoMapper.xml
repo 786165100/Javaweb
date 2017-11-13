@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+					"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.langsin.mapper.BookinfoMapper">
+
+	<resultMap type="bookinfo" id="bookinfoMap">
+		<id column="id" property="id" />
+		<result column="barcode" property="barcode" />
+		<result column="bookname" property="bookName" />
+		<result column="typeid" property="typeId" />
+		<result column="author" property="author" />
+		<result column="translator" property="translator" />
+		<result column="ISBN" property="isbn" />
+		<result column="price" property="price" />
+		<result column="page" property="page" />
+		<result column="bookcase" property="bookcaseid" />
+		<result column="inTime" property="inTime" />
+		<result column="operator" property="operator" />
+		<result column="del" property="del" />
+
+	</resultMap>
+
+	
+
+	<select id="queryListBookinfo" resultMap="bookinfoMap">
+		select * from tb_bookinfo
+	</select>
+</mapper>
